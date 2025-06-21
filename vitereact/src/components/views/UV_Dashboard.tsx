@@ -3,7 +3,18 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useAppStore } from "@/store/main";
-import { TaskSummary, Notification } from "@/types/api"; // Use appropriate types if already defined
+
+interface TaskSummary {
+  task_id: string;
+  title: string;
+  priority: string;
+  due_date: string;
+}
+
+interface Notification {
+  id: string;
+  content: string;
+}
 
 const UV_Dashboard: React.FC = () => {
   const auth = useAppStore((state) => state.auth);
@@ -49,10 +60,11 @@ const UV_Dashboard: React.FC = () => {
     }
   };
 
-  // WebSocket listeners
+  // WebSocket listeners (commented out until socket is properly implemented)
   useEffect(() => {
+    // TODO: Implement WebSocket connection
+    /*
     const handleTaskUpdated = (data: { taskId: string; updates: Partial<TaskSummary> }) => {
-      // Handle real-time task updates (if needed)
       console.log("Task updated:", data);
     };
 
@@ -67,15 +79,16 @@ const UV_Dashboard: React.FC = () => {
       socket.off("task/updated", handleTaskUpdated);
       socket.off("notification/created", handleNotification);
     };
+    */
   }, []);
 
   return (
-    <>
+    <div className="min-h-screen bg-gray-50">
       {/* Top Navigation */}
       <GV_TopNav />
 
       {/* Dashboard Content */}
-      <div className="p-6 bg-white rounded-lg shadow">
+      <div className="p-6 bg-white rounded-lg shadow m-4">
         {/* Header */}
         <h1 className="text-lg font-bold">Dashboard</h1>
 
@@ -128,7 +141,7 @@ const UV_Dashboard: React.FC = () => {
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

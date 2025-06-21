@@ -15,7 +15,7 @@ interface Task {
 
 const fetchTasks = async ({ queryKey }: { queryKey: string[] }) => {
   const [, filters] = queryKey;
-  const { data } = await axios.get(`/api/tasks`, {
+  const { data } = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/tasks`, {
     params: JSON.parse(filters) || {},
   });
   return data.tasks;
@@ -51,7 +51,7 @@ const UV_TaskListView: React.FC = () => {
           <select
             className="px-3 py-1 border rounded"
             value={appliedFilters.status || ''}
-            onChange={(e) => updateFilters({ status: e.target.value || null })}
+            onChange={(e) => updateFilters({ status: e.target.value || undefined })}
           >
             <option value="">All Statuses</option>
             <option value="todo">To Do</option>
@@ -61,7 +61,7 @@ const UV_TaskListView: React.FC = () => {
           <select
             className="px-3 py-1 border rounded ml-2"
             value={appliedFilters.priority || ''}
-            onChange={(e) => updateFilters({ priority: e.target.value || null })}
+            onChange={(e) => updateFilters({ priority: e.target.value || undefined })}
           >
             <option value="">All Priorities</option>
             <option value="low">Low</option>
