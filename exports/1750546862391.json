@@ -1,0 +1,19 @@
+{
+  "timestamp": 1750546862391,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "GV_GlobalNotifications",
+      "version": "1750546689668"
+    }
+  },
+  "projectId": "make-a-task-management1234",
+  "files": [
+    {
+      "path": "../../apps/make-a-task-management1234/vitereact/src/components/views/GV_GlobalNotifications.tsx",
+      "type": "text",
+      "size": 4664,
+      "dependencies": false
+    }
+  ]
+}

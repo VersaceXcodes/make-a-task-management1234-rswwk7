@@ -1,0 +1,19 @@
+{
+  "timestamp": 1750547357313,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "GV_GlobalSidebar",
+      "version": "1750547357100"
+    }
+  },
+  "projectId": "make-a-task-management1234",
+  "files": [
+    {
+      "path": "../../apps/make-a-task-management1234/vitereact/src/components/views/GV_GlobalSidebar.tsx",
+      "type": "text",
+      "size": 2840,
+      "dependencies": false
+    }
+  ]
+}

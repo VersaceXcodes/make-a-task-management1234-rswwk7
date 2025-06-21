@@ -1,0 +1,19 @@
+{
+  "timestamp": 1750547311708,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "UV_Dashboard",
+      "version": "latest"
+    }
+  },
+  "projectId": "make-a-task-management1234",
+  "files": [
+    {
+      "path": "../../apps/make-a-task-management1234/vitereact/src/components/views/UV_Dashboard.tsx",
+      "type": "text",
+      "size": 4268,
+      "dependencies": false
+    }
+  ]
+}
