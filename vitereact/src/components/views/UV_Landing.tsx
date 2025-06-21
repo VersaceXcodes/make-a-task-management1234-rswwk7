@@ -29,9 +29,6 @@ const UV_Landing: React.FC = () => {
               <Link to="/login" className="btn btn-primary">
                 Login
               </Link>
-              <Link to="/register" className="ml-4 btn btn-secondary">
-                Sign Up
-              </Link>
             </div>
           </div>
         </div>
@@ -88,8 +85,8 @@ const UV_Landing: React.FC = () => {
             Join thousands of users who are already boosting their productivity with TaskMaster.
           </p>
           <div className="mt-8">
-            <Link to="/register" className="btn btn-primary">
-              Sign Up Now
+            <Link to="/login" className="btn btn-primary">
+              Get Started
             </Link>
           </div>
         </div>

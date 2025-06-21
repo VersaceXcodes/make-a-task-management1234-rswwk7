@@ -21,6 +21,13 @@ type Notification = {
   created_at: string; // ISO 8601
 };
 
+type Task = {
+  id: string;
+  title: string;
+  status: string;
+  // Add other task properties as needed
+};
+
 interface AppStoreState {
   auth: AuthState | null;
   userPreferences: UserPreferences;
